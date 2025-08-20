@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script src="dom3.js"></script>
+
+   
+    <input type="text" placeholder="Enter FirstName">
+    <input type="text" placeholder="Enter LastName">
+    
+<button>submit</button>
+
+<h1>hello my name is <span id="fn"></span><span id="ln"></span></h1>
+
+<script>
+let first_name=document.getElementsByTagName("input")[0]
+let last_name=document.getElementsByTagName("input")[1]
+let sub=document.getElementsByTagName("button")[0];
+
+let fn=document.getElementById("fn")
+let ln=document.getElementById("ln")
+sub.addEventListener("click",()=>{
+    if(first_name.value.length<=0 || last_name.value.length<=0)
+{
+    console.log(alert("details"));
+}
+fn.innerHTML=first_name.value
+ln.innerHTML=last_name.value
+
+})
+
+</script>
+
+</body>
+</html>
